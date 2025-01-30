@@ -1,0 +1,14 @@
+base:
+- ../../base
+
+namespace: prod
+
+namePrefix: prod-
+
+patches:
+- ingress.yaml
+
+secretGenerator:
+- name: credential-secret
+  files:
+  - password.txt

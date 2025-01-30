@@ -1,0 +1,15 @@
+resources:
+- issuer.yaml
+- ingress.yaml
+- service.yaml
+- deployment.yaml
+
+commonLabels: kustomapp
+commmonAnnotations: mykustom-annotations
+
+nameSuffix: "-001"
+
+configMapGenerator:
+- name: nginx-template-configmap
+  files:
+  - nginx-template.conf

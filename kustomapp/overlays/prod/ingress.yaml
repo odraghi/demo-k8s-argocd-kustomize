@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kustomapp
+spec:
+  tls:
+  - hosts:
+    - kustomapp.dev.95-181-220-26.nip.io
+    secretName: kustomapp.dev.95-181-220-26.nip.io-tls
+  rules:
+  - host: kustomapp.dev.95-181-220-26.nip.io

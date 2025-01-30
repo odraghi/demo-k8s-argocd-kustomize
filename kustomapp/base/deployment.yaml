@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.26.2
+        env:
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: credential-secret
+              key: username
+        - name: SECRET_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: credential-secret
+              key: password
+        ports:
+        - containerPort: 80
+        volumeMounts:
+            - name: nginx-template
+              mountPath: /etc/nginx/templates/default.conf.template
+              readOnly: true
+      volumes:
+      - name: nginx-template
+        configMap:
+          name: nginx-template-configmap

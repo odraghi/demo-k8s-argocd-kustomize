@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application
+  name: kustomapp-dev
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://gitlab.95-181-220-57.nip.io/test/gitops.git
     targetRevision: HEAD
-    path: application
+    path: kustomapp/overlays/dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: dev
 
   syncPolicy:
     syncOptions:
