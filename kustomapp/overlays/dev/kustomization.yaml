@@ -1,4 +1,4 @@
-base:
+bases:
 - ../../base
 
 namespace: dev
