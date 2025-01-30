@@ -14,14 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-        volumeMounts:
-            - name: nginx-conf
-              mountPath: /etc/nginx/nginx.conf
-              subPath: nginx.conf
-              readOnly: true
+        image: nginx:1.26.2
         env:
         - name: SECRET_USERNAME
           valueFrom:
@@ -33,6 +26,13 @@ spec:
             secretKeyRef:
               name: test-db-secret
               key: password
+        ports:
+        - containerPort: 80
+        volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/templates/default.conf.template
+              subPath: nginx.conf
+              readOnly: true
       volumes:
       - name: nginx-conf
         configMap:
