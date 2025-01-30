@@ -22,17 +22,17 @@ spec:
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
               readOnly: true
-      env:
-      - name: SECRET_USERNAME
-        valueFrom:
-          secretKeyRef:
-            name: test-db-secret
-            key: username
-      - name: SECRET_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: test-db-secret
-            key: password
+        env:
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: test-db-secret
+              key: username
+        - name: SECRET_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: test-db-secret
+              key: password
       volumes:
       - name: nginx-conf
         configMap:
