@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://gitlab.95-181-220-57.nip.io/test/gitops.git
     targetRevision: HEAD
-    path: kustomapp/overlays/dev
+    path: kustomapp/overlays/prod
   destination: 
     server: https://kubernetes.default.svc
     namespace: prod
