@@ -11,7 +11,7 @@ data:
           add_header 'Cache-Control' 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
           expires off;
           default_type application/json;
-          return 200 '{"name":"${HOSTNAME}","user":"${SECRET_USERNAME}"}';
+          return 200 '{"name":"${HOSTNAME}","user":"${SECRET_USERNAME}","password":"${SECRET_PASSWORD}"}';
           #return 200 '{"name":"${HOSTNAME}","user":"${SECRET_USERNAME}","password":"${SECRET_PASSWORD}"}';
       }
     }
