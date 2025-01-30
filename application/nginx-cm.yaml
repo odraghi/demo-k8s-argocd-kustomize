@@ -12,6 +12,5 @@ data:
           expires off;
           default_type application/json;
           return 200 '{"name":"${HOSTNAME}","user":"${SECRET_USERNAME}","password":"${SECRET_PASSWORD}"}';
-          #return 200 '{"name":"${HOSTNAME}","user":"${SECRET_USERNAME}","password":"${SECRET_PASSWORD}"}';
       }
     }
