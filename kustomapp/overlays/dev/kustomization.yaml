@@ -8,5 +8,6 @@ namePrefix: dev-
 
 secretGenerator:
 - name: credential-secret
-  files:
-  - password.txt
+  literals:
+  - username=devadmin
+  - password=hello

@@ -8,5 +8,6 @@ namePrefix: prod-
 
 secretGenerator:
 - name: credential-secret
-  files:
-  - password.txt
+  literals:
+  - username=admin
+  - password=secret
