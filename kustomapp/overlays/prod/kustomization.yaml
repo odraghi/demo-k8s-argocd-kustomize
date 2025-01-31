@@ -6,7 +6,8 @@ namespace: prod
 namePrefix: prod-
 
 patches:
-- path: increase_replicas.yaml
+- path: replicas.yaml
+- path: ingress.yaml
 
 secretGenerator:
 - name: credential-secret

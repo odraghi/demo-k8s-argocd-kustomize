@@ -6,7 +6,7 @@ namespace: dev
 ## probleme avec ingress
 #namePrefix: dev-
 patches:
-- path: increase_replicas.yaml
+- path: replicas.yaml
 - path: ingress.yaml
 
 secretGenerator:
