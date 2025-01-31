@@ -6,6 +6,9 @@ namespace: prod
 
 namePrefix: prod-
 
+patches:
+- ingress.yaml
+
 secretGenerator:
 - name: credential-secret
   literals:

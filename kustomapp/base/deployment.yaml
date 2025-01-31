@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: kustomapp
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
     spec:
@@ -26,6 +26,7 @@ spec:
         volumeMounts:
             - name: nginx-template
               mountPath: /etc/nginx/templates/default.conf.template
+              subPath: nginx.conf
               readOnly: true
       volumes:
       - name: nginx-template
