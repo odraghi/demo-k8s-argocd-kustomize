@@ -26,6 +26,7 @@ spec:
         volumeMounts:
             - name: nginx-template
               mountPath: /etc/nginx/templates/default.conf.template
+              subPath: nginx-template.conf
               readOnly: true
       volumes:
       - name: nginx-template
