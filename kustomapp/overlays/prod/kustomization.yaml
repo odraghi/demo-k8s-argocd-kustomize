@@ -1,7 +1,5 @@
-bases:
-- ../../base
-
 resources:
+- ../../base
 - ingress.yaml
 
 namespace: prod
