@@ -4,7 +4,7 @@ kind: Ingress
 metadata:
   name: kustomapp
   annotations: 
-    cert-manager.io/issuer: "letsencrypt-cluster"
+    cert-manager.io/cluster-issuer: "letsencrypt-cluster"
 spec:
   ingressClassName: nginx
   tls:
