@@ -5,14 +5,16 @@
 Directories:
 - application : standard yaml file
 - kustomapp : kustomize application with 2 env (dev & prod)
-
-The application topology
-ingress -> service -> pods (nginx return json sample that read a kubernetes secret)
+- argocd : ingress to expose argocd AND applications yaml files
 
 Argocd file to create apps:
 - application.yaml
 - kustomapp-dev.yaml
 - kustomapp-prod.yaml
+
+# Application
+Topology
+ingress -> service -> pods (nginx return json sample that read a kubernetes secret)
 
 The app use DNS name in nip.ip domain that resovle my public IPs.
 That simplify let's encrypt certificat generations as DNS is already set (ACME mode http01).
@@ -35,8 +37,10 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl get svc -n argocd
 kubectl port-forward svc/argocd-server 8080:443 -n argocd
 ```
-Use argocd_ingress.yaml if you want to expose argoCD UI
-
+To expose argoCD UI on https://argocd.95-181-220-26.nip.io
+```bash
+kubectl apply -n argocd -f argocd/ingress.yaml
+```
 
 
 ## login with admin user and below token (as in documentation):
