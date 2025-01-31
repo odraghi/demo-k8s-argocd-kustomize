@@ -3,7 +3,8 @@ resources:
 
 namespace: prod
 
-namePrefix: prod-
+
+#namePrefix: prod-
 
 patches:
 - path: replicas.yaml

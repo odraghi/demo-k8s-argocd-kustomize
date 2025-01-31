@@ -9,7 +9,7 @@ commonLabels:
 commonAnnotations: 
   app: kustomapp-annotation
 
-nameSuffix: "-v1-0"
+#nameSuffix: "-v1-0"
 
 configMapGenerator:
 - name: nginx-template-configmap
