@@ -3,8 +3,8 @@ resources:
 
 namespace: dev
 
-## probleme avec ingress
-#namePrefix: dev-
+namePrefix: dev-
+
 patches:
 - path: replicas.yaml
 - path: ingress.yaml
