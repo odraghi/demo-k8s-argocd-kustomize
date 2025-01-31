@@ -10,7 +10,7 @@ commonAnnotations:
   app: kustomapp-annotation
 
 ## probleme avec ingress
-#nameSuffix: "-001"
+nameSuffix: "-version-0-1"
 
 configMapGenerator:
 - name: nginx-template-configmap
