@@ -1,5 +1,7 @@
-# Gitops
+# Gitops sample
 
+## Pre requisite
+- gitlab / project and argocd user member as a repoter.
 
 ## install ArgoCD in k8s
 ```bash

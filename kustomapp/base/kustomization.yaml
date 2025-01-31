@@ -9,7 +9,8 @@ commonLabels:
 commonAnnotations: 
   app: kustomapp-annotation
 
-# attention pas de char "point" ca casse le service et ingress
+# https://kubernetes.io/docs/concepts/overview/working-with-objects/names/
+# Don't use "." char in name to avoid issue
 nameSuffix: "-v1-0"
 
 configMapGenerator:
