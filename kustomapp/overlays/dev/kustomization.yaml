@@ -3,7 +3,7 @@ resources:
 
 namespace: dev
 
-#namePrefix: dev-
+namePrefix: dev-
 
 patches:
 - path: replicas.yaml
