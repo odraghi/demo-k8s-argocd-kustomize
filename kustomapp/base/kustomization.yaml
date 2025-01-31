@@ -9,7 +9,8 @@ commonLabels:
 commonAnnotations: 
   app: kustomapp-annotation
 
-nameSuffix: "-v1.0"
+# attention pas de char "point" ca casse le service et ingress
+nameSuffix: "-v1-0"
 
 configMapGenerator:
 - name: nginx-template-configmap
