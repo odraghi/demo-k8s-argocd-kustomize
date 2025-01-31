@@ -19,12 +19,12 @@ spec:
         - name: SECRET_USERNAME
           valueFrom:
             secretKeyRef:
-              name: test-db-secret
+              name: credential-secret
               key: username
         - name: SECRET_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: test-db-secret
+              name: credential-secret
               key: password
         ports:
         - containerPort: 80
