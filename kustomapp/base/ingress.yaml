@@ -6,18 +6,3 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-cluster"
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-    - kustomapp.base.95-181-220-26.nip.io
-    secretName: kustomapp.base.95-181-220-26.nip.io-tls
-  rules:
-  - host: kustomapp.base.95-181-220-26.nip.io
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kustomapp
-            port:
-              number: 8080
