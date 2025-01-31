@@ -1,6 +1,27 @@
 # Gitops sample
 
-## Pre requisite
+# Information
+
+Directories:
+- application : standard yaml file
+- kustomapp : kustomize application with 2 env (dev & prod)
+
+The application topology
+ingress -> service -> pods (nginx json sample that read kubernetes secret)
+
+Argocd file to create apps:
+- application.yaml
+- kustomapp-dev.yaml
+- kustomapp-prod.yaml
+
+The app use DNS name in nip.ip domain that resovle my public IPs.
+That simplify let's encrypt certificat generations as DNS is already set (ACME mode http01).
+- myapp.95-181-220-26.nip.io -> 95.181.220.26
+- myapp.dev.95-181-220-26.nip.io -> 95.181.220.26
+- myapp.prod.95-181-220-26.nip.io -> 95.181.220.26
+
+
+## Pre-requisites
 - gitlab / project and argocd user member as a repoter.
 
 ## install ArgoCD in k8s
