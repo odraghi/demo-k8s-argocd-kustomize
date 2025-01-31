@@ -1,0 +1,16 @@
+resources:
+- ../../base
+
+namespace: pp
+
+namePrefix: pp-
+
+patches:
+- path: replicas.yaml
+- path: ingress.yaml
+
+secretGenerator:
+- name: credential-secret
+  literals:
+  - username=admin-pp
+  - password=secret-pp

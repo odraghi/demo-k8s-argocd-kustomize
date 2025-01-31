@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kustomapp-pp
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+
+  source:
+    repoURL: https://gitlab.95-181-220-57.nip.io/test/gitops.git
+    targetRevision: HEAD
+    path: kustomapp/overlays/pp
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: pp
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
