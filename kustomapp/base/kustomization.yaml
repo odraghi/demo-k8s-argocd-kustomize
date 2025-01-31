@@ -1,5 +1,4 @@
 resources:
-- issuer.yaml
 - ingress.yaml
 - service.yaml
 - deployment.yaml
