@@ -3,7 +3,7 @@ resources:
 - service.yaml
 - deployment.yaml
 
-commonLabels: 
+labels: 
   app: kustomapp
 
 commonAnnotations: 
