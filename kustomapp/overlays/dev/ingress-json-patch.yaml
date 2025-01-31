@@ -1,0 +1,9 @@
+- op: replace
+  path: /spec/tls/0/hosts
+  value: kustomapp.dev.95-181-220-26.nip.io
+- op: replace
+  path: /spec/tls/0/hosts/secretName
+  value: kustomapp.dev.95-181-220-26.nip.io-tls
+- op: replace
+  path: /spec/rules/0/host
+  value: dev1.example.com

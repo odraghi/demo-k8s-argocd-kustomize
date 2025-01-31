@@ -1,10 +1,17 @@
 resources:
 - ../../base
-- ingress.yaml
 
 namespace: dev
 
 namePrefix: dev-
+
+patchesJson6902:
+- target:
+    group: extensions
+    version: v1beta1
+    kind: Ingress
+    name: kustomapp
+  path: ingress-json-patch.yaml
 
 secretGenerator:
 - name: credential-secret
