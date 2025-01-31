@@ -1,12 +1,12 @@
 bases:
 - ../../base
 
+resources:
+- ingress.yaml
+
 namespace: dev
 
 namePrefix: dev-
-
-patches:
-- ingress.yaml
 
 secretGenerator:
 - name: credential-secret
