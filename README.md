@@ -19,8 +19,10 @@ ingress -> service -> pods (nginx return json sample that read a kubernetes secr
 
 The app use DNS name in nip.ip domain that resovle my public IPs.
 That simplify let's encrypt certificat generations as DNS is already set (ACME mode http01).
+- argocd.95-181-220-26.nip.io -> 95.181.220.26
 - myapp.95-181-220-26.nip.io -> 95.181.220.26
 - myapp.dev.95-181-220-26.nip.io -> 95.181.220.26
+- myapp.pp.95-181-220-26.nip.io -> 95.181.220.26
 - myapp.prod.95-181-220-26.nip.io -> 95.181.220.26
 
 
