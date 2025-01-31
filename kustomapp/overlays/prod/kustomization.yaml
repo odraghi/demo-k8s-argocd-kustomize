@@ -1,12 +1,10 @@
 resources:
 - ../../base
+- ingress.yaml
 
 namespace: prod
 
 namePrefix: prod-
-
-patches:
-- ingress.yaml
 
 secretGenerator:
 - name: credential-secret
