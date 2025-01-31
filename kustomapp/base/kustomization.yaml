@@ -3,7 +3,11 @@ resources:
 - service.yaml
 - deployment.yaml
 
-commonLabels: kustomapp
+commonLabels: 
+  app: kustomapp
+
+commonAnnotations: 
+  app: kustomapp-annotation
 
 nameSuffix: "-001"
 
