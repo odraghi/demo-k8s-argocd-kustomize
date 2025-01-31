@@ -4,7 +4,6 @@ resources:
 - deployment.yaml
 
 commonLabels: kustomapp
-commonAnnotations: mykustom-annotations
 
 nameSuffix: "-001"
 
