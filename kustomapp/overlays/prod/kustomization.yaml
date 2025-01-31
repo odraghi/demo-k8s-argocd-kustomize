@@ -5,6 +5,9 @@ namespace: prod
 
 namePrefix: prod-
 
+patches:
+- path: increase_replicas.yaml
+
 secretGenerator:
 - name: credential-secret
   literals:
