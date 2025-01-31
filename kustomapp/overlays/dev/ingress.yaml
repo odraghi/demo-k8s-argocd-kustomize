@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - kustomapp.base.95-181-220-26.nip.io
-    secretName: kustomapp.base.95-181-220-26.nip.io-tls
+    - kustomapp.del.95-181-220-26.nip.io
+    secretName: kustomapp.del.95-181-220-26.nip.io-tls
   rules:
-  - host: kustomapp.base.95-181-220-26.nip.io
+  - host: kustomapp.del.95-181-220-26.nip.io
     http:
       paths:
       - path: /

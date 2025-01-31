@@ -9,7 +9,8 @@ labels:
 commonAnnotations: 
   app: kustomapp-annotation
 
-nameSuffix: "-001"
+## probleme avec ingress
+#nameSuffix: "-001"
 
 configMapGenerator:
 - name: nginx-template-configmap
