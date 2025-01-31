@@ -26,7 +26,11 @@ That simplify let's encrypt certificat generations as DNS is already set (ACME m
 ## Pre-requisites
 - gitlab / project and argocd user member as a repoter
 - install cert-manager in k8s cluster
-- setup kind Issuer or CusterIssuer for let's encrypt
+ 
+Setup CusterIssuer for let's encrypt
+```bash
+kubectl apply -f cluster-issuer.yaml
+```
 
 ## install ArgoCD in k8s
 ```bash
