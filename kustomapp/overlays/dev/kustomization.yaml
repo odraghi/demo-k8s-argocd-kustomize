@@ -7,6 +7,7 @@ namespace: dev
 #namePrefix: dev-
 patches:
 - path: increase_replicas.yaml
+- path: ingress.yaml
 
 secretGenerator:
 - name: credential-secret
